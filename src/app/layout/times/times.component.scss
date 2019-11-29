@@ -1,0 +1,17 @@
+.times {
+  padding: 20px;
+  .mat-card {
+    padding: 20px 0;
+    .mat-card-header {
+      padding: 0 40px;
+    }
+    .mat-card-content {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px;
+    }
+    .mat-card-actions {
+      padding: 0 40px;
+    }
+  }
+}

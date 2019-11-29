@@ -1,0 +1,49 @@
+@mixin override-mat-input($theme) {
+  .mat-form-field {
+    .mat-form-field-label {
+      color: var(--secondary);
+      opacity: 0.7;
+    }
+    .mat-form-field-underline {
+      background-color: var(--secondary);
+      color: var(--secondary);
+      opacity: 0.7;
+      .mat-form-field-ripple {
+        background-color: var(--secondary);
+      }
+    }
+    .mat-datepicker-toggle-default-icon {
+      color: var(--secondary);
+      opacity: 0.7;
+    }
+    .mat-form-field-suffix {
+      color: var(--secondary);
+      opacity: 0.7;
+      cursor: pointer;
+    }
+    .close {
+      padding: 1px 3px;
+      position: absolute;
+      top: -20px;
+      right: -45px;
+      border-radius: 50%;
+      background-color: var(--negative);
+      cursor: pointer;
+      .mat-icon {
+        color: var(--white);
+        font-size: 14px;
+        width: 14px;
+        height: 14px;
+        margin-top: 1px;
+      }
+    }
+  }
+  .mat-form-field-appearance-outline {
+    .mat-form-field-outline {
+      color: var(--secondary);
+    }
+    .mat-form-field-outline-thick {
+      color: var(--secondary);
+    }
+  }
+}

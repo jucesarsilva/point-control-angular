@@ -1,0 +1,11 @@
+@mixin override-mat-menu($theme) {
+  $accent: map-get($theme, accent);
+  .mat-menu-content:not(:empty) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+  .mat-menu-item {
+    background: transparent;
+    color: mat-color($accent, 'text');
+  }
+}

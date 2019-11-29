@@ -1,0 +1,7 @@
+@mixin override-mat-icon($theme, $positive) {
+  .mat-icon {
+    &.mat-positive {
+      color: $positive;
+    }
+  }
+}

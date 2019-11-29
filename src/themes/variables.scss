@@ -1,0 +1,64 @@
+:root {
+  // colors
+  --primary:#7229e6;
+  --secondary: #863bff;
+  --accent: #4a4f58;
+  --light-accent: #797979;
+  --positive: #00b083;
+  --info: #1884b9;
+  --negative: #f44336;
+  --warning: #ffc938;
+  --disabled: #cccccc;
+  --white: #fff;
+  --green: #24957a;
+  --dark-green: #098668;
+  --middle-green: #28d2a7;
+  --light-green: #defaf3;
+  --yellow: #ac8d37;
+  --light-yellow: #fff8e3;
+  --blue: #1884b9;
+  --light-blue: #e3f6ff;
+  --red: #de3b55;
+  --light-red: #ffe3e8;
+  --border: #e0e0e0;
+  // breakpoints
+  --xs: 0;
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+}
+
+$primary: var(--primary);
+$secondary: var(--secondary);
+$accent: var(--accent);
+$positive: var(--positive);
+$info: var(--info);
+$negative: var(--negative);
+$warning: var(--warning);
+$disabled: var(--disabled);
+$white: var(--white);
+$green: var(--green);
+$dark-green: var(--dark-green);
+$middle-green: var(--middle-green);
+$light-green: var(--light-green);
+$yellow: var(--yellow);
+$light-yellow: var(--light-yellow);
+$blue: var(--blue);
+$light-blue: var(--light-blue);
+$red: var(--red);
+$light-red: var(--light-red);
+$border: var(--border);
+$light-accent: var(--light-accent);
+
+$grid-breakpoints: (
+  xs: var(--xs),
+  sm: var(--sm),
+  md: var(--md),
+  lg: var(--lg),
+  xl: var(--xl)
+);
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,6 @@
+@mixin override-mat-sidenav($theme) {
+  .mat-sidenav-container {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+}

@@ -1,0 +1,13 @@
+@mixin override-mat-typography($theme) {
+  $default-typography: mat-typography-config(
+    $font-family: 'OpenSans, Helvetica Neue, sans-serif',
+    $headline: mat-typography-level(32px, 48px, 700),
+    $body-1: mat-typography-level(15px, 24px, 400),
+    $body-2: mat-typography-level(15px, 24px, 600)
+  );
+  @include angular-material-typography($default-typography);
+  .mat-body-1,
+  .mat-body-2 {
+    color: var(--accent);
+  }
+}

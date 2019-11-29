@@ -1,0 +1,29 @@
+.rounded {
+  border-radius: 22px !important;
+}
+.outline {
+  color: var(--secondary) !important;
+  border: 1px solid var(--secondary) !important;
+  background-color: var(--white) !important;
+  .mat-icon {
+    margin-left: 10px;
+  }
+}
+.flat {
+  background-color: transparent !important;
+  color: var(--secondary) !important;
+  font-weight: 600 !important;
+  &:hover {
+    background-color: rgba($color: #000, $alpha: .1);
+  }
+}
+.mat-mini-fab {
+  box-shadow: none !important;
+}
+.positive {
+  background-color: var(--positive) !important;
+  color: var(--white) !important;
+}
+.mat-flat-button[disabled] {
+  color: var(--white) !important;
+}

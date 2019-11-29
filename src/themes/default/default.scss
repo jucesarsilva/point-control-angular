@@ -1,0 +1,26 @@
+$default-palette-primary: (
+  500: $primary,
+  contrast: (
+    500: $light-primary-text
+  )
+);
+$default-palette-accent: (
+  500: $secondary,
+  contrast: (
+    500: $light-primary-text
+  )
+);
+$default-palette-warn: (
+  500: $negative,
+  contrast: (
+    500: $light-primary-text
+  )
+);
+$default-theme-primary: mat-palette($default-palette-primary);
+$default-theme-accent: mat-palette($default-palette-accent);
+$default-theme-warn: mat-palette($default-palette-warn);
+$default-theme: mat-light-theme(
+  $default-theme-primary,
+  $default-theme-accent,
+  $default-theme-warn
+);

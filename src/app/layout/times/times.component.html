@@ -1,0 +1,40 @@
+<section class="times">
+  <mat-card>
+    <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-card-title fxLayout="row" fxLayoutAlign="start center" class="mat-body-2">
+        <button class="rounded m-r-25" color="primary" mat-mini-fab (click)="onBack()">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        {{date | date:'dd/MM/yyyy'}}
+      </mat-card-title>
+      <div fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="start center">
+        <button class="rounded" color="primary" mat-flat-button (click)="onNew()">Novo Horário</button>
+      </div>
+    </mat-card-header>
+    <mat-card-content class="m-t-20">
+      <div *ngIf="day.points.length" fxLayout="row wrap" fxLayoutGap="25px" fxLayoutAlign="start center">
+        <time-picker
+          label="Horário *"
+          color="primary"
+          appearance="outline"
+          revertLabel="Fechar"
+          submitLabel="Ok"
+          required="true"
+          [index]="i"
+          [id]="'timepicker' + i"
+          [userTime]="point.userTime"
+          *ngFor="let point of day.points; let i = index"
+          (remove)="onRemove($event, point)"
+          (change)="onChange($event, point)">
+        </time-picker>
+      </div>
+      <div class="mat-body-2" *ngIf="!day.points.length" fxLayout="row wrap" fxLayoutAlign="start center">
+        Nenhum horário.
+      </div>
+    </mat-card-content>
+    <mat-card-actions fxLayout="row wrap" fxLayoutAlign="end center">
+      <button class="rounded outline" color="primary" mat-flat-button (click)="onClear()">Limpar</button>
+      <button class="rounded m-l-10" color="primary" mat-flat-button (click)="onSave()">Salvar</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

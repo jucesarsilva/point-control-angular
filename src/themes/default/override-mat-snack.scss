@@ -1,0 +1,20 @@
+@mixin override-mat-snack($theme) {
+  .snack-bar-success {
+    background-color: var(--positive) !important;
+  }
+  .snack-bar-info {
+    background-color: var(--info) !important;
+  }
+  .snack-bar-alert {
+    background-color: var(--warning) !important;
+  }
+  .snack-bar-error {
+    background-color: var(--negative) !important;
+  }
+  .mat-simple-snackbar-action {
+    button {
+      background-color: transparent !important;
+      color: var(--white);
+    }
+  }
+}

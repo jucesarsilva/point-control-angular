@@ -1,0 +1,22 @@
+<div class="layout" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+    <a fxLayout="row" fxLayoutAlign="center center"  class="logo" href="/">
+      <mat-icon matSuffix>alarm</mat-icon>
+    </a>
+    <span class="logout">
+      Olá, {{getUserName()}}
+      <span class="divider">|</span>
+      <a href="javascript:void()" class="logout" (click)="logout()">SAIR</a>
+    </span>
+  </mat-toolbar>
+  <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav-content>
+      <section>
+        <div [hidden]="!loading">
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </div>
+        <router-outlet></router-outlet>
+      </section>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

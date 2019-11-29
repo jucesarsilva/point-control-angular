@@ -1,0 +1,17 @@
+.layout {
+  mat-toolbar {
+    height: 60px;
+    .mat-icon {
+      color: var(--white);
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    .divider {
+      margin: 0 10px;
+    }
+    .logout {
+      font-size: 15px;
+      color: var(--white);
+    }
+  }
+}

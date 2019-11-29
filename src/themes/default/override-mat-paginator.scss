@@ -1,0 +1,9 @@
+@mixin override-mat-paginator($theme) {
+  $accent: map-get($theme, accent);
+  .mat-paginator-navigation-previous:not([disabled]),
+  .mat-paginator-navigation-next:not([disabled]),
+  .mat-paginator-navigation-first:not([disabled]),
+  .mat-paginator-navigation-last:not([disabled]) {
+    color: mat-color($accent, 'text') !important;
+  }
+}

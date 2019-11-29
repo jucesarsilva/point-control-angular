@@ -1,0 +1,25 @@
+@mixin override-mat-tabs($theme, $background) {
+  $primary: map-get($theme, primary);
+  $foreground: map-get($theme, foreground);
+  $header-border: 1px solid mat-color($foreground, divider);
+  .mat-tab-header {
+    background-color: $background;
+    border-bottom: none;
+    .mat-tab-label-container {
+      margin: 0 20px;
+      border-bottom: $header-border;
+      .mat-tab-label, .mat-tab-link {
+        color: mat-color($primary, text);
+        font-size: 20px;
+      }
+      .mat-tab-label-active {
+        font-weight: bold;
+        opacity: 1;
+        outline: 1;
+      }
+    }
+  }
+  .mat-tab-body {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,45 @@
+<mat-card class="days" fxLayout="column">
+  <form [formGroup]="form" fxLayout="row" fxLayoutAlign="end center">
+
+    <mat-form-field floatLabel="auto" class="input-accent m-r-15">
+      <mat-label>Data de início</mat-label>
+      <input matInput [matDatepicker]="startDate" formControlName="startDate">
+      <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+      <mat-datepicker #startDate></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" class="input-accent m-r-15">
+      <mat-label>Data de término</mat-label>
+      <input matInput [matDatepicker]="endDate" formControlName="endDate">
+      <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+      <mat-datepicker #endDate color="primary"></mat-datepicker>
+    </mat-form-field>
+
+    <div class="m-r-15">
+      <button class="rounded"
+        color="accent"
+        mat-flat-button
+        [disabled]="!form.value.startDate || !form.value.endDate"
+        (click)="search()">
+        Buscar
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+
+  </form>
+
+  <table class="m-t-20" mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="day">
+      <td class="cursor-pointer" (click)="goTo(element)" mat-cell *matCellDef="let element">
+        <div class="point-content" fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start center">
+          <div>{{element.date | date:'dd/MM/yyyy'}}:</div>
+          <div class="point" *ngFor="let point of element.points">
+            {{point.time}}
+          </div>
+        </div>
+      </td>
+    </ng-container>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</mat-card>

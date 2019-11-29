@@ -1,0 +1,41 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+@import 'src/themes/variables.scss';
+@import 'src/themes/default/default';
+@import 'src/themes/default/override-mat-typography';
+@import 'src/themes/default/override-mat-tabs';
+@import 'src/themes/default/override-mat-icon';
+@import 'src/themes/default/override-mat-checkbox';
+@import 'src/themes/default/override-mat-snack';
+@import 'src/themes/default/override-mat-dialog';
+@import 'src/themes/default/override-mat-sidenav';
+@import 'src/themes/default/override-mat-menu';
+@import 'src/themes/default/override-mat-table';
+@import 'src/themes/default/override-mat-paginator';
+@import 'src/themes/default/override-mat-input';
+@import 'src/themes/default/override-mat-select';
+@import 'src/themes/default/override-mat-progress-bar';
+
+
+.default-theme {
+  @include angular-material-theme($default-theme);
+  @include override-mat-typography($default-theme);
+  @include override-mat-tabs($default-theme, $white);
+  @include override-mat-icon($default-theme, $positive);
+  @include override-mat-checkbox($default-theme);
+  @include override-mat-snack($default-theme);
+  @include override-mat-dialog($default-theme);
+  @include override-mat-sidenav($default-theme);
+  @include override-mat-menu($default-theme);
+  @include override-mat-table($default-theme);
+  @include override-mat-paginator($default-theme);
+  @include override-mat-input($default-theme);
+  @include override-mat-select($default-theme);
+  @include override-mat-progress-bar($default-theme);
+}
+
+
+ @import 'src/themes/general.scss';
+ @import 'src/themes/spaces.scss';
+ @import 'src/themes/buttons.scss';

@@ -1,0 +1,17 @@
+<div fxFlex fxLayout="row">
+  <mat-form-field floatLabel="auto" fxFlex appearance="{{appearance}}">
+    <mat-label>{{ label }}</mat-label>
+    <input
+      [textMask]="{mask: timemask}"
+      matInput
+      class="timeInput"
+      id="time_Control"
+      name="time_Control"
+      [(ngModel)]="time"
+      (blur)="onBlur()">
+    <mat-icon matSuffix (click)="showPicker()">access_time</mat-icon>
+    <div class="close">
+      <mat-icon (click)="onRemove()">close</mat-icon>
+    </div>
+  </mat-form-field>
+</div>

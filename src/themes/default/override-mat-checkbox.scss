@@ -1,0 +1,9 @@
+@mixin override-mat-checkbox($theme) {
+  $accent: map-get($theme, accent);
+  .mat-checkbox-label {
+    color: mat-color($accent, text);
+  }
+  .mat-checkbox-frame {
+    border-color: mat-color($accent, text);
+  }
+}
