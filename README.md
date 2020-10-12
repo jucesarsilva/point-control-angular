@@ -1,4 +1,8 @@
 # PointControlAngular
+It´s necessary run the API, and configure BD to full work
+- Github page will render just login page
+[Demo](https://github.com/jucesarsilva/point-control-java)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 

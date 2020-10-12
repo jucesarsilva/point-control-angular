@@ -13,8 +13,8 @@ export class LayoutComponent implements OnInit {
 
   @HostBinding('class') componentCssClass;
 
-  private mobileQuery: MediaQueryList;
-  private _mobileQueryListener: () => void;
+  public mobileQuery: MediaQueryList;
+  public _mobileQueryListener: () => void;
   public loading: boolean = false;
 
   constructor(
